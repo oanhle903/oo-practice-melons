@@ -103,8 +103,6 @@ def print_pairing_info(melon_types):
 # ls = make_melon_types()
 # print_pairing_info(ls)
 
-    
-
 
 def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
@@ -115,7 +113,6 @@ def make_melon_type_lookup(melon_types):
         dtc[object.code] = object.name
 
     return dtc
-#     print(dtc)
     
 # ls = make_melon_types()
 # make_melon_type_lookup(ls)
@@ -146,7 +143,7 @@ class Melon:
 def make_melons(melon_types):
     """Returns a list of Melon objects."""
 
-    ls = []
+    list_of_melons = []
 
     melons_by_id = make_melon_type_lookup(melon_types) # a dictionanry {'musk': 'Muskmelon', 'cas': 'Casaba', 'cren': 'Crenshaw', 'yw': 'Yellow Watermelon'}
 
@@ -160,9 +157,9 @@ def make_melons(melon_types):
     melon_8 = Melon(melons_by_id['musk'], 6, 7, 4, 'Michael')
     melon_9 = Melon(melons_by_id['yw'], 7, 10, 3, 'Sheila')
 
-    ls = [melon_1, melon_2, melon_3, melon_4, melon_5, melon_6, melon_7, melon_8, melon_9]
+    ist_of_melons = [melon_1, melon_2, melon_3, melon_4, melon_5, melon_6, melon_7, melon_8, melon_9]
 
-    return ls
+    return ist_of_melons
 
 # ls = make_melon_types()
 # print(make_melons(ls))
@@ -177,6 +174,6 @@ def get_sellability_report(melons):
         else:
             print(f"Harvested by {melon.farmer} from Field {melon.field} (NOT SELLABLE)")
 
-ls1 = make_melon_types()    
-ls2 = make_melons(ls1)
-get_sellability_report(ls2)
+# ls1 = make_melon_types()    
+# ls2 = make_melons(ls1)
+# get_sellability_report(ls2)
